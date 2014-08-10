@@ -4,20 +4,20 @@ describe "Static pages" do
 
 	let (:base_title) { "Fluttr" }
 
-  describe "Home page" do
+	subject { page }
 
-    it "should have the content 'Sample App'" do
-      visit root_path
-      expect(page).to have_content('Fluttr')
-    end
+  describe "Home page" do
+  	before { visit root_path }
+
+    it { should have_content('Fluttr') }
+    it { should have_title('Fluttr') }
+    it { should_not have_title('| Home') }
 
     	it 'should have the right title' do
-  		visit root_path
   		expect(page).to have_title("#{base_title}")
   	end
 
   	it 'should not have a custom title' do
-  		visit root_path
   		expect(page).not_to have_title("#{base_title} | Home")
   	end
   end
