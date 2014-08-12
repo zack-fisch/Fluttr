@@ -18,4 +18,7 @@ describe "User Pages" do
 			expect(page).to have_title("#{base_title} | Sign up")
 		end
 	end
+
+
+			
 end
