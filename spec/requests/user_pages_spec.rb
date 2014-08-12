@@ -13,13 +13,14 @@ describe "User Pages" do
 	end
 
 	describe 'Signup Page' do 
+
 		it 'Should have the proper title' do
 			visit signup_path
 			expect(page).to have_title("#{base_title} | Sign up")
 		end
 	end
 
-	describe "signup" do
+	describe "Signup" do
 
     before { visit signup_path }
 
@@ -43,7 +44,5 @@ describe "User Pages" do
         expect { click_button submit }.to change(User, :count).by(1)
       end
     end
-
-
-			
+	end
 end
