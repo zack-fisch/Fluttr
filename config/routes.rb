@@ -7,7 +7,7 @@ SampleApp::Application.routes.draw do
   get '/about', to: 'static_pages#about'
   get '/contact', to: 'static_pages#contact'
   get '/signup', to: 'users#new'
-  get 'signin', to: 'sessions#new'
+  get '/signin', to: 'sessions#new'
   get '/signout', to: 'sessions#destroy'
 
   # The priority is based upon order of creation: first created -> highest priority.
